@@ -8,7 +8,7 @@ function ArticlePage() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [post, setPost] = useState(null);
 
-  const url = `http://localhost:4000/posts/${id}`;
+  const url = `http://localhost:3000/posts/${id}`;
   useEffect(() => {
     setIsLoaded(false);
     fetch(url)

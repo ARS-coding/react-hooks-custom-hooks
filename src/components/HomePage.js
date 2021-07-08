@@ -9,7 +9,7 @@ function HomePage() {
 
   useEffect(() => {
     setIsLoaded(false);
-    fetch("http://localhost:4000/posts")
+    fetch("http://localhost:3000/posts")
       .then((r) => r.json())
       .then((posts) => {
         setPosts(posts);
