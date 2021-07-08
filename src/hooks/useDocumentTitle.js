@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-function useDocumentTitle(pageTitle) {
+function useDocumentTitle(pageTitle = "Underreacted") {
   useEffect(() => {
     document.title = pageTitle;
   }, [pageTitle]);
