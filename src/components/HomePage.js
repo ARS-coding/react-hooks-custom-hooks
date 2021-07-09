@@ -5,14 +5,16 @@ import useDocumentTitle from "../hooks/useDocumentTitle";
 import useQuery from "../hooks/useQuery";
 
 function HomePage() {
-  const { data, isLoaded } = useQuery("http://localhost:3000/posts");
+  // fetch the data
+  const { data: post, isLoaded } = useQuery("http://localhost:3000/posts");
+  
   // set the document title
   useDocumentTitle()
-
+  
   return (
     <>
       <About />
-      {isLoaded ? <ArticleList posts={data} /> : <h3>Loading...</h3>}
+      {isLoaded ? <ArticleList posts={post} /> : <h3>Loading...</h3>}
     </>
   );
 }
